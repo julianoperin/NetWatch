@@ -5,11 +5,14 @@ export const Image = styled.img`
   max-width: 720px;
   transition: all 0.3s;
   object-fit: cover;
-  border-radius: 20px;
-  animation: animateThumb 0.5s;
+  border-radius: 15px;
+  box-shadow: 0 8px 6px -6px black;
+  animation: animateThumb 0.9s;
 
   :hover {
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
   @keyframes animateThumb {

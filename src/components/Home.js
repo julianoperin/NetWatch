@@ -16,14 +16,14 @@ import NoImage from "../images/no_image.jpg";
 
 const Home = () => {
   const { state, loading, error } = useHomeFetch();
-  console.log(state.results);
+  // console.log(state.results);
   return (
     <>
-      {state.results[0] ? (
+      {state.results[1] ? (
         <HeroImage
-          image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
-          title={state.results[0].title}
-          text={state.results[0].overview}
+          image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[1].backdrop_path}`}
+          title={state.results[1].title}
+          text={state.results[1].overview}
         />
       ) : null}
       <Grid header="Popular Movies">
