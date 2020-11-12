@@ -21,15 +21,18 @@ const Home = () => {
   // console.log(state.results);
   return (
     <>
-      {state.results[1] ? (
+      <SearchBar setSearchTerm={setSearchTerm} />
+
+      {!searchTerm && state.results[1] ? (
         <HeroImage
           image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[1].backdrop_path}`}
           title={state.results[1].title}
           text={state.results[1].overview}
         />
       ) : null}
-      <SearchBar setSearchTerm={setSearchTerm} />
-      <Grid header={searchTerm ? "Results" : "Featured Movies"}>
+      <Grid
+        header={searchTerm ? `Results for " ${searchTerm}"` : "Featured Movies"}
+      >
         {state.results.map((movie) => (
           <Thumb
             key={movie.id}

@@ -21,7 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        background: pink;
+        /* background-image: linear-gradient(#261F80, #372FB9, #261F80); */
+        background: linear-gradient(to left, black, #261F80 25%, #261F80 75%, black 100%);
 
         h1 {
             font-size: 2rem;
