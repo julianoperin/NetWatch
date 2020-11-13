@@ -10,19 +10,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 
-const App = () => {
-  return (
-    <Router>
-      <Header />
-      <Route>
-        <Route path="/" element={<Home />} />
-        <Route path="/:movieId" element={<Movie />} />
-        <Route path="/*" element={<NotFound />} />
-      </Route>
-      <Home />
-      <GlobalStyle />
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:movieId" element={<Movie />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
+    <GlobalStyle />
+  </Router>
+);
 
 export default App;

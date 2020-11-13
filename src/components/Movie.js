@@ -14,9 +14,11 @@ import NoImage from "../images/no_image.jpg";
 
 const Movie = () => {
   return (
-    <div>
-      <h1>Movie</h1>
-    </div>
+    <>
+      <div>
+        <h1>Movie</h1>
+      </div>
+    </>
   );
 };
 
