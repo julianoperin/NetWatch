@@ -7,13 +7,32 @@ export const useMovieFetch = (movieId) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMovie = async () => {
       try {
         setLoading(true);
         setError(false);
+
+        const movie = await API.fetchMovie(movieId);
+        const credits = await API.fetchCredits(movieId);
+        // Get directors
+        const directors = credits.crew.filter(
+          (member) => member.job === "Director"
+        );
+
+        setState({
+          ...movie,
+          actors: credits.cast,
+          directors,
+        });
+
+        setLoading(false);
       } catch (error) {
         setError(true);
       }
     };
+
+    fetchMovie();
   }, [movieId]);
+
+  return { state, loading, error };
 };
