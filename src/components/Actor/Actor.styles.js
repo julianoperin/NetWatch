@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  color: var(--white);
-  background: var(--darkGrey);
-  border-radius: 20px;
+  color: #fff;
+  background: black;
+  border-radius: 5px;
   padding: 5px;
   text-align: center;
+  transition: ease 0.5s;
+
+  :hover {
+    opacity: 0.6;
+  }
 
   h3 {
     margin: 10px 0 0 0;
@@ -19,7 +24,7 @@ export const Wrapper = styled.div`
 export const Image = styled.img`
   display: block;
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 5px;
 `;
