@@ -40,6 +40,7 @@ export const Text = styled.div`
 
   h1 {
     font-size: var(--fontSuperBig);
+    font-family: "Lora", serif;
 
     @media screen and (max-width: 720px) {
       font-size: var(--fontBig);
@@ -48,6 +49,7 @@ export const Text = styled.div`
 
   p {
     font-size: var(--fontMed);
+    line-height: 25px;
 
     @media screen and (max-width: 720px) {
       font-size: var(--fontSmall);
