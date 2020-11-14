@@ -21,14 +21,89 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  max-width: var(--maxWidth);
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
+  border-radius: 5px;
+
+  h1 {
+    font-family: "Lora", serif;
+    font-size: 2.2rem;
+  }
+
+  .genres {
+    line-height: 1.5;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  /* STACK LIST */
+  .StackUl ul {
+    list-style-type: none;
+    width: 400px;
+    height: auto;
+    margin: 26px 0 !important;
+    padding-left: 0;
+  }
+
+  .StackUl ul li {
+    font-size: 1.3rem;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    transition: margin-left 0.3s linear, font-weight 0.2s linear,
+      color 0.3s linear;
+    -webkit-transition: margin-left 0.3s linear, font-weight 0.2s linear,
+      color 0.3s linear;
+    -moz-transition: margin-left 0.3s linear, font-weight 0.2s linear,
+      color 0.3s linear;
+    -o-transition: margin-left 0.3s linear, font-weight 0.2s linear,
+      color 0.3s linear;
+    -ms-transition: margin-left 0.3s linear, font-weight 0.2s linear,
+      color 0.3s linear;
+  }
+
+  .StackUl ul li:first-child {
+    border-top: 1px solid #fff;
+  }
+
+  .StackUl ul li:hover {
+    margin-left: 20px;
+    font-weight: 600;
+    /* color: #b237f3; */
+  }
+
+  /* END STACK LIST */
 
   @media screen and (max-width: 768px) {
     display: block;
     max-height: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .StackUl ul {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 415px) {
+    /* display: block; */
+    /* max-height: none; */
+    .StackUl ul li {
+      font-size: 0.8rem;
+    }
+    .StackUl ul {
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .StackUl ul li {
+      font-size: 0.8rem;
+    }
+    .StackUl ul {
+      width: 250px;
+    }
   }
 `;
 
@@ -38,33 +113,9 @@ export const Text = styled.div`
   color: var(--white);
   overflow: hidden;
 
-  .rating-directors {
-    text-align: left;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start; */
-  }
-
   .score {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    background: #fff;
-    color: #000;
+    color: #fff;
     font-weight: 800;
-    border-radius: 50%;
-    margin: 0;
-  }
-
-  .director {
-    /* margin: 0 0 0 40px; */
-    display: block;
-
-    /* p {
-      margin: 0;
-    } */
   }
 
   h1 {

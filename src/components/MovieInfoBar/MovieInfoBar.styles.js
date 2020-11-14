@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   min-height: 100px;
-  background: var(--darkGrey);
+  background: #39288e;
   padding: 0 20px;
 `;
 
@@ -18,7 +18,7 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--medGrey);
+    background: #b336f4;
     border-radius: 20px;
     margin: 0 20px;
     flex: 1;
@@ -29,6 +29,19 @@ export const Content = styled.div`
 
     :last-child {
       margin-right: 0;
+    }
+
+    span {
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: monospace;
+    }
+
+    strong {
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-style: italic;
     }
   }
 

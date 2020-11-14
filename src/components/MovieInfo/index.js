@@ -8,6 +8,8 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 import NoImage from "../../images/no_image.jpg";
 // Styles
 import { Wrapper, Content, Text } from "./MovieInfo.styles";
+// helpers
+import { calcTime, convertMoney } from "../../helpers";
 
 const MovieInfo = ({ movie }) => (
   <Wrapper backdrop={movie.backdrop_path}>
@@ -22,20 +24,55 @@ const MovieInfo = ({ movie }) => (
       />
       <Text>
         <h1>{movie.title}</h1>
-        <h3>PLOT</h3>
         <p>{movie.overview}</p>
 
-        <div className="rating-directors">
-          <div>
-            <h3>RATING</h3>
-            <div className="score">{movie.vote_average}</div>
-          </div>
-          <div className="director">
-            <h3>DIRECTOR{movie.directors.length > 1 ? "S" : ""}</h3>
-            {movie.directors.map((director) => (
-              <p key={director.credit_id}>{director.name}</p>
-            ))}
-          </div>
+        <div className="rating-directors StackUl">
+          <ul>
+            <li>
+              <span className="underline">Rating:</span>{" "}
+              <span className="score">{movie.vote_average}</span>
+            </li>
+            <li>
+              <span className="underline">Director</span>
+              {movie.directors.length > 1 ? "s" : ""}:
+              {movie.directors.map((director) => (
+                <strong className="director" key={director.credit_id}>
+                  {" "}
+                  {director.name}
+                  {movie.directors.length > 1 ? "," : ""}
+                </strong>
+              ))}
+            </li>
+            <li>
+              <span className="underline">Running time:</span>{" "}
+              {calcTime(movie.runtime)}
+            </li>
+            <li>
+              <span className="underline">Budget:</span>{" "}
+              {convertMoney(movie.budget)}
+            </li>
+            <li>
+              <span className="underline">Revenue:</span>{" "}
+              {convertMoney(movie.revenue)}
+            </li>
+            <li>
+              <span className="underline">
+                Genre
+                {movie.genres.length > 1 ? "s" : ""}:
+              </span>
+              {movie.genres.map((item) => (
+                <strong className="genres" key={item.id}>
+                  {" "}
+                  {item.name}
+                  {movie.genres.length > 1 ? "," : ""}
+                </strong>
+              ))}
+            </li>
+            {/* 
+            time={movie.runtime}
+        budget={movie.budget}
+        revenue={movie.revenue} */}
+          </ul>
         </div>
       </Text>
     </Content>
