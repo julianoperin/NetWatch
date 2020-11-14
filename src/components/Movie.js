@@ -1,21 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// config
+// Config
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
-
-// components
-import Breadcrumb from "./BreadCrumb";
+// Components
+import BreadCrumb from "./BreadCrumb";
 import Grid from "./Grid";
 import Spinner from "./Spinner";
 import MovieInfo from "./MovieInfo";
 import MovieInfoBar from "./MovieInfoBar";
 import Actor from "./Actor";
-
-//Hook
+// Hook
 import { useMovieFetch } from "../hooks/useMovieFetch";
 // Image
 import NoImage from "../images/no_image.jpg";
-import BreadCrumb from "./BreadCrumb";
 
 const Movie = () => {
   const { movieId } = useParams();
@@ -24,8 +21,6 @@ const Movie = () => {
 
   if (loading) return <Spinner />;
   if (error) return <div>Something went wrong...</div>;
-
-  console.log(movie);
 
   return (
     <>

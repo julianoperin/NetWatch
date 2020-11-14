@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: var(--darkGrey);
+  background: #39278e;
   padding: 0 20px;
 `;
 
@@ -10,7 +10,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: var(--maxWidth);
-  padding: 20px 0;
+  padding: 3px 0 0 0;
   margin: 0 auto;
 `;
 
@@ -18,14 +18,14 @@ export const LogoImg = styled.img`
   width: 200px;
 
   @media screen and (max-width: 500px) {
-    width: 150px;
+    width: 140px;
   }
 `;
 
 export const TMDBLogoImg = styled.img`
-  width: 100px;
+  width: 250px;
 
   @media screen and (max-width: 500px) {
-    width: 80px;
+    width: 170px;
   }
 `;

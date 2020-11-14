@@ -10,7 +10,6 @@ const SearchBar = ({ setSearchTerm }) => {
   const initial = useRef(true);
 
   useEffect(() => {
-    // skip the initial render on useEffect
     if (initial.current) {
       initial.current = false;
       return;
@@ -29,8 +28,8 @@ const SearchBar = ({ setSearchTerm }) => {
         <img src={searchIcon} alt="search-icon" />
         <input
           type="text"
-          placeholder="Search Movie"
-          onChange={(e) => setState(e.currentTarget.value)}
+          placeholder="Search for movies..."
+          onChange={(event) => setState(event.currentTarget.value)}
           value={state}
         />
       </Content>

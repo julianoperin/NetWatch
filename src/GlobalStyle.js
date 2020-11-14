@@ -15,7 +15,14 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
-        font-family: 'Abel', sans-serif;
+        /* FONT FAMILY */
+        /* 
+        font-family: 'Lora', serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Raleway', sans-serif;
+         */
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
     }
 
     body {
@@ -23,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         /* background-image: linear-gradient(#261F80, #372FB9, #261F80); */
         background: linear-gradient(to left, black, #261F80 25%, #261F80 75%, black 100%);
+
+      
 
         h1 {
             font-size: 2rem;

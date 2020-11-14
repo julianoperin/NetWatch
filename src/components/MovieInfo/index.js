@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // Components
 import Thumb from "../Thumb";
 // Config
@@ -30,23 +31,19 @@ const MovieInfo = ({ movie }) => (
             <div className="score">{movie.vote_average}</div>
           </div>
           <div className="director">
-            <h3>DIRECTOR:{movie.directors.length > 1 ? "S" : ""}</h3>
+            <h3>DIRECTOR{movie.directors.length > 1 ? "S" : ""}</h3>
             {movie.directors.map((director) => (
-              <span key={director.credit_id}>{director.name}</span>
+              <p key={director.credit_id}>{director.name}</p>
             ))}
-          </div>
-          <div>
-            <h3>Release Date</h3>
-            <div className="director">{movie.release_date}</div>
-          </div>
-          <div>
-            <h3>Vote Count</h3>
-            <div className="director">{`${movie.vote_count}`}</div>
           </div>
         </div>
       </Text>
     </Content>
   </Wrapper>
 );
+
+MovieInfo.propTypes = {
+  movie: PropTypes.object,
+};
 
 export default MovieInfo;

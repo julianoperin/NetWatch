@@ -30,6 +30,7 @@ const Home = () => {
 
   return (
     <>
+      <SearchBar setSearchTerm={setSearchTerm} />
       {!searchTerm && state.results[0] ? (
         <HeroImage
           image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
@@ -37,7 +38,6 @@ const Home = () => {
           text={state.results[0].overview}
         />
       ) : null}
-      <SearchBar setSearchTerm={setSearchTerm} />
       <Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
         {state.results.map((movie) => (
           <Thumb
