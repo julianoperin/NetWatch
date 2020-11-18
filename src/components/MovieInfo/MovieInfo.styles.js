@@ -113,6 +113,13 @@ export const Text = styled.div`
   color: var(--white);
   overflow: hidden;
 
+  .overview {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    max-width: 1100px;
+    padding-right: 0.8rem;
+  }
+
   .score {
     color: #fff;
     font-weight: 800;

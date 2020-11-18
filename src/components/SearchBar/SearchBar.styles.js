@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   position: relative;
-  max-width: var(--maxWidth);
+  max-width: 640px;
   width: 100%;
   height: 55px;
   background: #b435f5;

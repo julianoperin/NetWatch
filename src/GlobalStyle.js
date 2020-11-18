@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --maxWidth: 1280px;
+        --maxWidth: 1680px;
         --white: #fff;
         --lightGrey: #eee;
         --medGrey: #353535;
@@ -28,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        /* background-image: linear-gradient(#261F80, #372FB9, #261F80); */
         background: linear-gradient(to left, black, #261F80 25%, #261F80 75%, black 100%);
 
       
