@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --maxWidth: 1680px;
+        --maxWidth: 1780px;
         --white: #fff;
         --lightGrey: #eee;
         --medGrey: #353535;
@@ -25,6 +25,17 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 200;
     }
 
+    html{
+        &::-webkit-scrollbar{
+            width: 0.8rem;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #B336F4;
+        }
+        &::-webkit-scrollbar-track {
+    background: #111;
+  }
+
     body {
         margin: 0;
         padding: 0;
@@ -33,9 +44,10 @@ export const GlobalStyle = createGlobalStyle`
       
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 600;
             color: var(--white);
+            font-family: 'Montserrat', sans-serif;
         }
 
         h3 {
