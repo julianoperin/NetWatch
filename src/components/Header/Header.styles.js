@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div `
   background: #39278e;
   padding: 0 20px;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div `
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +14,7 @@ export const Content = styled.div`
   margin: 0 auto;
 `;
 
-export const LogoImg = styled.img`
+export const LogoImg = styled.img `
   width: 200px;
 
   @media screen and (max-width: 500px) {
@@ -22,7 +22,7 @@ export const LogoImg = styled.img`
   }
 `;
 
-export const TMDBLogoImg = styled.img`
+export const TMDBLogoImg = styled.img `
   width: 250px;
 
   @media screen and (max-width: 500px) {

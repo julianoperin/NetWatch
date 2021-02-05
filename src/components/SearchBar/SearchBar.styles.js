@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div `
   display: flex;
   align-items: center;
   height: 100px;
@@ -8,11 +8,11 @@ export const Wrapper = styled.div`
   padding: 0 20px;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div `
   position: relative;
   max-width: 1240px;
   width: 100%;
-  height: 55px;
+  height: 50px;
   background: #b435f5;
   margin: 0 auto;
   border-radius: 5px;
@@ -22,7 +22,7 @@ export const Content = styled.div`
     position: absolute;
     left: 15px;
     top: 14px;
-    width: 30px;
+    width: 25px;
   }
 
   input {
@@ -30,7 +30,7 @@ export const Content = styled.div`
     position: absolute;
     left: 0;
     margin: 8px 0;
-    padding: 0 0 0 60px;
+    padding: 0 0 5px 60px;
     border: 0;
     width: 90%;
     background: transparent;
