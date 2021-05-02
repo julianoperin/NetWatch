@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100px;
-  background: #39278e;
+  background: #000;
   padding: 0 20px;
 `;
 
-export const Content = styled.div `
+export const Content = styled.div`
   position: relative;
   max-width: 1240px;
   width: 100%;
   height: 50px;
-  background: #b435f5;
+  background: #999;
   margin: 0 auto;
   border-radius: 5px;
   color: var(--white);
