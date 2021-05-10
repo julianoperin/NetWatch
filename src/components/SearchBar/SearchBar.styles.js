@@ -13,7 +13,7 @@ export const Content = styled.div`
   max-width: 1240px;
   width: 100%;
   height: 50px;
-  background: #999;
+  background: #d3d3d3;
   margin: 0 auto;
   border-radius: 5px;
   color: var(--white);
@@ -23,6 +23,7 @@ export const Content = styled.div`
     left: 15px;
     top: 14px;
     width: 25px;
+    color: #000 !important;
   }
 
   input {
@@ -35,10 +36,10 @@ export const Content = styled.div`
     width: 90%;
     background: transparent;
     height: 40px;
-    color: var(--white);
+    color: #000;
 
     ::placeholder {
-      color: #fff;
+      color: #000;
       opacity: 1; /* Firefox */
     }
 

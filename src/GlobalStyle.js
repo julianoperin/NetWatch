@@ -30,16 +30,16 @@ export const GlobalStyle = createGlobalStyle`
             width: 0.8rem;
         }
         &::-webkit-scrollbar-thumb{
-            background-color: #B336F4;
+            background-color: #D3D3D3;
         }
         &::-webkit-scrollbar-track {
-    background: #111;
+    background: #000;
   }
 
     body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(to left, black, #261F80 25%, #261F80 75%, black 100%);
+        background: linear-gradient(to left, black, #000 25%, #000 75%, black 100%);
 
       
 

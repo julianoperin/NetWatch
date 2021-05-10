@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.button`
   display: block;
-  background: #b435f5;
+  background: #d3d3d3;
   width: 35%;
   min-width: 200px;
   height: 60px;
   border-radius: 5px;
-  color: var(--white);
+  color: #000;
   font-weight: 500;
   border: 0;
   font-size: var(--fontBig);
